@@ -7,7 +7,7 @@ function Blog() {
 
 
     useEffect(() => {
-      fetch("https://mboa-rest-api.herokuapp.com/blogs")
+      fetch("https://haunted-skeleton-96575.herokuapp.com/blogs")
       .then((res)=>res.json())
       .then((data)=>{
         setDetails(data)
@@ -23,9 +23,9 @@ function Blog() {
     <section className='Bidders'>
     <div>
     {blogData.map((detail)=>(
-      <div className='blogInfo' key={detail.content}>
+      <div className='blogInfo' key={detail.id}>
       <div className='post'>
-       <h1>{detail.name}</h1>
+       <h1>{detail.title}</h1>
        <p>{detail.content}</p>
 
 
